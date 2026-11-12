@@ -1,23 +1,23 @@
-# Daily research — YYYY-MM-DD
+# 每日研究 — YYYY-MM-DD
 
-## Summary
+## 摘要
 
-<!-- One or two sentences, or state that no significant verified signals were found. -->
+<!-- 用一至兩句摘要；若無足夠證據，請明確說明尚未發現重要訊號。 -->
 
-## Signals
+## 觀察訊號
 
-| Topic | What changed | Why it matters | Evidence | Confidence |
+| 主題 | 變化 | 重要性 | 證據 | 信心程度 |
 | --- | --- | --- | --- | --- |
-|  |  |  | [Source](URL) (published YYYY-MM-DD) | High / Medium / Low |
+|  |  |  | [來源](URL)（發布日期：YYYY-MM-DD） | 高／中／低 |
 
-## Sources
+## 來源
 
-- [Title](URL) — publisher, published YYYY-MM-DD, accessed YYYY-MM-DD
+- [標題](URL) — 發布者，發布日期：YYYY-MM-DD，查閱日期：YYYY-MM-DD
 
-## Follow-ups
+## 待追蹤事項
 
-- [ ] Question or item to verify
+- [ ] 待查證的問題或項目
 
-## Coverage gaps
+## 尚未涵蓋
 
-- Areas not checked or claims that remain uncertain
+- 尚未查閱的領域或仍未確認的主張

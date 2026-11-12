@@ -1,44 +1,31 @@
 # Agentic Coding Trending
 
-A living knowledge base for tracking AI coding agent trends, emerging tools,
-workflows, and ecosystem changes through daily and weekly research notes.
+追蹤 AI 程式開發代理、工具、工作流程與生態系變化的繁體中文知識庫，以每日研究筆記和每週整理持續更新。
 
-## What to track
+> **主要讀者：** 使用繁體中文的開發者、研究者及 AI 程式開發工具使用者。
 
-- Coding agents, models, and IDE or editor integrations
-- New and changing tools, capabilities, and product launches
-- Developer workflows, adoption patterns, and evaluations
-- Ecosystem changes, including standards, partnerships, and policy
+## 開始瀏覽
 
-## Structure
+- [每日研究筆記](notes/daily/) — 依日期整理研究訊號（`YYYY-MM-DD.md`）
+- [每週趨勢整理](notes/weekly/) — 依 ISO 週次彙整觀察（`YYYY-Www.md`）
+- [每日筆記範本](notes/templates/daily.md) · [每週筆記範本](notes/templates/weekly.md)
+- [GitHub Pages 專案首頁](index.html)
 
-- [`notes/daily/`](notes/daily/) — dated research notes (`YYYY-MM-DD.md`)
-- [`notes/weekly/`](notes/weekly/) — weekly synthesis (`YYYY-Www.md`, ISO week)
-- [`notes/templates/`](notes/templates/) — templates for new notes
+## 追蹤範圍
 
-Start with the [daily note template](notes/templates/daily.md) or
-[weekly note template](notes/templates/weekly.md). Each weekly note should link
-to the daily notes it synthesizes.
+- 程式開發代理、模型，以及 IDE／編輯器整合
+- 新工具、功能、產品發布與重要變更
+- 開發者工作流程、採用情況與評估方式
+- 標準、合作關係、政策等生態系變化
 
-## Research practice
+## 研究原則
 
-1. Record the date a change was announced separately from the date it was
-   observed. Prefer original sources such as release notes, documentation,
-   papers, and first-party announcements; use secondary reporting for context.
-2. Link sources next to the claims they support. Include a publication or
-   release date when available, and distinguish verified facts from analysis
-   or speculation.
-3. Explain why a signal matters to AI-assisted software development. Avoid
-   treating a launch, benchmark, or social post alone as proof of adoption or
-   a lasting trend.
-4. In weekly notes, compare signals across the week, identify what changed
-   versus earlier notes, and call out uncertainty and follow-up questions.
-5. Keep notes concise and dated. Correct outdated claims with a dated
-   clarification rather than silently erasing useful context.
+1. 分別記錄事件發生時間與研究觀察時間。優先引用官方公告、版本說明、文件和論文，並以可靠的第二手報導補充脈絡。
+2. 在主張旁附上來源連結及可得的發布日期，並區分已確認事實、分析和推測。
+3. 說明訊號對 AI 輔助軟體開發的意義；單一發布、基準測試或社群貼文不能單獨證明採用情況或長期趨勢。
+4. 每週整理應比較本週與先前的變化，指出不確定之處及待追蹤問題，並連結相關每日筆記。
+5. 若沒有足夠證據或有意義的發現，請明確記錄；不要為了填滿筆記而臆測。
 
-## Contributing
+## 參與方式
 
-Create a daily note from the template for each research day. At the end of the
-week, create an ISO-week note from the weekly template and link the relevant
-daily notes. If there are no meaningful or sufficiently sourced findings, say
-so; an empty signal is better than an unsupported claim.
+研究日請依每日範本新增筆記；每週結束時，依每週範本建立 ISO 週次摘要，並連結該週的每日筆記。請為過時資訊新增有日期的更正，保留原始脈絡。

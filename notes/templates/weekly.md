@@ -1,29 +1,29 @@
-# Weekly research — YYYY-Www (YYYY-MM-DD to YYYY-MM-DD)
+# 每週研究 — YYYY-Www（YYYY-MM-DD 至 YYYY-MM-DD）
 
-## Week in review
+## 本週回顧
 
-<!-- Summarize the most consequential verified developments and the evidence behind them. -->
+<!-- 摘要最重要且已查證的進展，並提供證據。 -->
 
-## Leading themes
+## 主要趨勢
 
-| Theme | Evidence from daily notes | Implications | Confidence |
+| 趨勢 | 每日筆記中的證據 | 影響 | 信心程度 |
 | --- | --- | --- | --- |
-|  | [Daily note](../daily/YYYY-MM-DD.md) |  | High / Medium / Low |
+|  | [每日筆記](../daily/YYYY-MM-DD.md) |  | 高／中／低 |
 
-## Changes and continuity
+## 延續與變化
 
-- What is new this week:
-- What continued or weakened:
-- What remains uncertain:
+- 本週新出現的訊號：
+- 持續或減弱的訊號：
+- 尚未釐清的問題：
 
-## Tools and workflows to watch
+## 值得追蹤的工具與工作流程
 
 -
 
-## Sources and daily notes
+## 來源與每日筆記
 
-- [Daily note — YYYY-MM-DD](../daily/YYYY-MM-DD.md)
+- [每日研究 — YYYY-MM-DD](../daily/YYYY-MM-DD.md)
 
-## Questions for next week
+## 下週待追蹤問題
 
 - [ ]
