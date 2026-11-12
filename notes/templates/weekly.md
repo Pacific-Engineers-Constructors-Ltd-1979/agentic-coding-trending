@@ -1,4 +1,36 @@
-# 每週研究 — YYYY-Www（YYYY-MM-DD 至 YYYY-MM-DD）
+# Weekly Research — YYYY-Www (YYYY-MM-DD to YYYY-MM-DD)
+
+## Week in review
+
+<!-- Summarize the most consequential verified developments and their evidence. -->
+
+## Leading themes
+
+| Theme | Evidence from daily notes | Implications | Confidence |
+| --- | --- | --- | --- |
+|  | [Daily note](../daily/YYYY-MM-DD.md) |  | High / Medium / Low |
+
+## Changes and continuity
+
+- What is new this week:
+- What continued or weakened:
+- What remains uncertain:
+
+## Tools and workflows to watch
+
+-
+
+## Sources and daily notes
+
+- [Daily research — YYYY-MM-DD](../daily/YYYY-MM-DD.md)
+
+## Questions for next week
+
+- [ ]
+
+---
+
+# 每週研究 — YYYY-Www（YYYY-MM-DD 至 YYYY-MM-DD，繁體中文）
 
 ## 本週回顧
 
