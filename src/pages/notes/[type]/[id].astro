@@ -1,0 +1,47 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getNotes, noteUrl, type Note } from '../../../lib/notes';
+
+export async function getStaticPaths() {
+  const all = await getNotes();
+  return all.map((note) => {
+    const sameType = all.filter((n) => n.type === note.type);
+    const i = sameType.indexOf(note);
+    return {
+      params: { type: note.type, id: note.date },
+      // sameType is newest first, so the next index is the older note.
+      props: { note, newer: sameType[i - 1], older: sameType[i + 1] },
+    };
+  });
+}
+
+const { note, newer, older } = Astro.props as { note: Note; newer?: Note; older?: Note };
+const { Content, headings } = await render(note.entry);
+const [enHeading, zhHeading] = headings.filter((h) => h.depth === 1);
+const label = note.type === 'daily' ? 'Daily note' : 'Weekly note';
+---
+
+<BaseLayout title={`${note.title} | Agentic Coding Trending`}>
+  <p class="meta"><span class="badge">{label}</span> <time datetime={note.date}>{note.date}</time></p>
+  {enHeading && zhHeading && (
+    <p class="jump">
+      <a href={`#${enHeading.slug}`}>Jump to English</a> ·
+      <a href={`#${zhHeading.slug}`}>Jump to 繁體中文</a>
+    </p>
+  )}
+  <article><Content /></article>
+  <nav class="pager" aria-label="Neighbouring notes">
+    {newer ? <a href={noteUrl(newer)} rel="next">Newer: {newer.date}</a> : <span></span>}
+    {older ? <a href={noteUrl(older)} rel="prev">Older: {older.date}</a> : <span></span>}
+  </nav>
+</BaseLayout>
+
+<style>
+  .meta { color: #52627a; font-size: .9rem; margin: 0; }
+  .badge { padding: .1rem .5rem; border: 1px solid #dce3ee; border-radius: 999px; }
+  .jump { position: sticky; top: 0; margin: .5rem 0 1rem; padding: .5rem 0; background: #fff; border-bottom: 1px solid #dce3ee; }
+  .pager { display: flex; justify-content: space-between; margin-top: 2rem; }
+  article :global(table) { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+  article :global(th), article :global(td) { padding: .4rem .6rem; border: 1px solid #dce3ee; text-align: left; }
+</style>

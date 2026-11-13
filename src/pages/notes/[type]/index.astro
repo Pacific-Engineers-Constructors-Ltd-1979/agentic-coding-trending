@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getNotes, noteTypes, noteUrl, type NoteType } from '../../../lib/notes';
+
+export function getStaticPaths() {
+  return noteTypes.map((type) => ({ params: { type } }));
+}
+
+const type = Astro.params.type as NoteType;
+const notes = await getNotes(type);
+const heading = type === 'daily' ? 'Daily notes' : 'Weekly notes';
+---
+
+<BaseLayout title={`${heading} | Agentic Coding Trending`}>
+  <h1>{heading}</h1>
+  {notes.length === 0 ? <p>No notes yet.</p> : (
+    <ul class="note-list">
+      {notes.map((n) => (
+        <li>
+          <a href={noteUrl(n)}>{n.title}</a>
+          {n.summary && <p>{n.summary}</p>}
+        </li>
+      ))}
+    </ul>
+  )}
+</BaseLayout>
+
+<style>
+  .note-list { list-style: none; padding: 0; }
+  .note-list li + li { margin-top: 1.25rem; }
+  .note-list p { margin: .25rem 0 0; color: #52627a; }
+</style>

@@ -1,5 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getNotes, noteUrl } from '../lib/notes';
+
+const [latestDaily] = await getNotes('daily');
+const [latestWeekly] = await getNotes('weekly');
+const latest = [latestDaily, latestWeekly].filter(Boolean);
 ---
 
 <BaseLayout title="Agentic Coding Trending | AI Coding Trends">
@@ -7,6 +12,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="eyebrow">Bilingual research knowledge base</p>
     <h1>Agentic Coding Trending</h1>
     <p>Track AI coding agents, tools, workflows, and ecosystem changes through daily research and weekly synthesis, with evidence and uncertainty made clear.</p>
+    {latest.length > 0 && (
+      <>
+        <h2>Latest notes</h2>
+        <ul>{latest.map((n) => <li><a href={noteUrl(n)}>{n.title}</a></li>)}</ul>
+      </>
+    )}
     <p>Current status: research notes are being initialized; no trend findings have been collected or verified yet.</p>
   </section>
   <section lang="zh-Hant">
