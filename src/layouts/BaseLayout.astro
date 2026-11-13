@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+}
+const {
+  title,
+  description = 'A bilingual, source-backed knowledge base tracking AI coding agents, tools, workflows, and ecosystem changes.',
+  lang = 'en',
+} = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <a href={`${base}/`} class="site-title">Agentic Coding Trending</a>
+      <nav aria-label="Primary">
+        <a href={`${base}/notes/daily/`}>Daily</a>
+        <a href={`${base}/notes/weekly/`}>Weekly</a>
+        <a href={`${base}/research/topics/`}>Topics</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <a href="https://github.com/Pacific-Engineers-Constructors-Ltd-1979/agentic-coding-trending">GitHub repository</a>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root { color-scheme: light; font-family: system-ui, sans-serif; color: #172033; background: #f5f7fb; }
+  body { box-sizing: border-box; max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; line-height: 1.7; }
+  header { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: baseline; justify-content: space-between; margin-bottom: 1rem; }
+  header nav { display: flex; gap: 1rem; }
+  .site-title { font-weight: 700; text-decoration: none; color: inherit; }
+  main { padding: 2rem; border: 1px solid #dce3ee; border-radius: 1rem; background: #fff; }
+  footer { margin-top: 1.5rem; font-size: .9rem; color: #52627a; }
+  h1 { line-height: 1.2; }
+  a { color: #1458a6; }
+  .eyebrow { color: #52627a; font-size: .9rem; }
+  section + section { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #dce3ee; }
+  @media (max-width: 480px) { body { padding: 1rem .75rem; } main { padding: 1.25rem; } }
+</style>

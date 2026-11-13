@@ -2,7 +2,7 @@
 
 ## Summary
 
-<!-- Summarize in one or two sentences, or say that no significant verified signals were found. -->
+<!-- Summarize in one or two sentences, or say that no significant verified signals were found. The site shows this first paragraph as the list excerpt. -->
 
 ## Signals
 

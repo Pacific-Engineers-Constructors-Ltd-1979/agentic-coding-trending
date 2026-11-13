@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Node / Astro
+node_modules/
+.astro/
+
+# Agent skills (installed locally)
+skills-lock.json
+.agents/
+.claude/

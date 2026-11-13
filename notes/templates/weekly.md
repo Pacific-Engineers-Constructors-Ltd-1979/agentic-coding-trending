@@ -2,7 +2,7 @@
 
 ## Week in review
 
-<!-- Summarize the most consequential verified developments and their evidence. -->
+<!-- Summarize the most consequential verified developments and their evidence. The site shows this first paragraph as the list excerpt. -->
 
 ## Leading themes
 
