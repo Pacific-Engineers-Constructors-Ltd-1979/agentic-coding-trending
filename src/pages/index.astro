@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getNotes, noteUrl } from '../lib/notes';
+import { getNotes, noteUrl, url } from '../lib/notes';
+import { getTopics } from '../lib/topics';
 
 const [latestDaily] = await getNotes('daily');
 const [latestWeekly] = await getNotes('weekly');
 const latest = [latestDaily, latestWeekly].filter(Boolean);
+const topics = await getTopics();
 ---
 
 <BaseLayout title="Agentic Coding Trending | AI Coding Trends">
@@ -18,12 +20,16 @@ const latest = [latestDaily, latestWeekly].filter(Boolean);
         <ul>{latest.map((n) => <li><a href={noteUrl(n)}>{n.title}</a></li>)}</ul>
       </>
     )}
+    <h2>Topics</h2>
+    <p>{topics.map((t) => t.repo).join(' · ')} — <a href={url('/research/topics/')}>all topics</a></p>
     <p>Current status: research notes are being initialized; no trend findings have been collected or verified yet.</p>
   </section>
   <section lang="zh-Hant">
     <p class="eyebrow">雙語研究知識庫</p>
     <h1>Agentic Coding Trending</h1>
     <p>透過每日研究與每週整理，追蹤 AI 程式開發代理、工具、工作流程與生態系變化，並清楚呈現證據與不確定性。</p>
+    <h2>追蹤主題</h2>
+    <p>{topics.map((t) => t.repo).join(' · ')} — <a href={url('/research/topics/')}>所有主題</a></p>
     <p>目前狀態：研究筆記仍在建立中；尚未蒐集或查證任何趨勢發現。</p>
   </section>
 </BaseLayout>

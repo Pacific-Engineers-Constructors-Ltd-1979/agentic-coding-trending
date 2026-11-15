@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTopics } from '../../lib/topics';
+
+const topics = await getTopics();
+---
+
+<BaseLayout title="Topics | Agentic Coding Trending">
+  <section lang="en">
+    <h1>Topics</h1>
+    <p>GitHub repositories this knowledge base tracks. Signals come from each repository's releases and changelog.</p>
+    <ul class="topics">
+      {topics.map((t) => (
+        <li>
+          <a href={t.repoUrl}><strong>{t.repo}</strong></a>
+          <p>{t.reason.en}</p>
+          <p class="links">
+            <a href={t.releasesUrl}>Releases</a>
+            {t.changelogUrl && <> · <a href={t.changelogUrl}>Changelog</a></>}
+            {t.tags.length > 0 && <span class="tags"> · {t.tags.join(', ')}</span>}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </section>
+  <section lang="zh-Hant">
+    <h1>追蹤主題</h1>
+    <p>本知識庫所追蹤的 GitHub 儲存庫。觀察訊號來自各儲存庫的版本發布與變更紀錄。</p>
+    <ul class="topics">
+      {topics.map((t) => (
+        <li>
+          <a href={t.repoUrl}><strong>{t.repo}</strong></a>
+          <p>{t.reason.zh}</p>
+          <p class="links">
+            <a href={t.releasesUrl}>版本發布</a>
+            {t.changelogUrl && <> · <a href={t.changelogUrl}>變更紀錄</a></>}
+            {t.tags.length > 0 && <span class="tags"> · {t.tags.join(', ')}</span>}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .topics { list-style: none; padding: 0; }
+  .topics li { padding: .75rem 1rem; border: 1px solid #dce3ee; border-radius: .75rem; }
+  .topics li + li { margin-top: .75rem; }
+  .topics p { margin: .25rem 0 0; }
+  .links, .tags { color: #52627a; font-size: .9rem; }
+</style>

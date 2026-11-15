@@ -1,0 +1,28 @@
+# Topics on the watchlist. Each key is a GitHub repository (owner/name).
+# Reasons are drafts: edit them to match how you use each repository.
+stablyai/orca:
+  reason:
+    en: Runs a fleet of coding agents from one place; used in daily work.
+    zh: 在同一處管理多個程式開發代理；日常工作中使用。
+  tags: [agent, orchestration]
+
+mattpocock/skills:
+  reason:
+    en: Source of the agent skills installed for this repository.
+    zh: 本儲存庫所安裝之代理技能的來源。
+  tags: [skills]
+  changelog: CHANGELOG.md
+
+anthropics/claude-code:
+  reason:
+    en: Terminal coding agent used in daily work.
+    zh: 日常工作中使用的終端機程式開發代理。
+  tags: [agent, cli]
+  changelog: CHANGELOG.md
+
+openai/codex:
+  reason:
+    en: Lightweight terminal coding agent used in daily work.
+    zh: 日常工作中使用的輕量終端機程式開發代理。
+  tags: [agent, cli]
+  changelog: CHANGELOG.md
