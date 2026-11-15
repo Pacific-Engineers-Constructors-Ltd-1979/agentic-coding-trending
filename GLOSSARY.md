@@ -35,3 +35,7 @@ _Avoid_: Reference, link, citation
 **Coverage gap**:
 An area a Note did not check, or a claim that remains uncertain.
 _Avoid_: Limitation, TODO
+
+**Note link**:
+A relative link from one Note to another, written as a path to the Markdown file. It must point to an existing Note; a Weekly note uses Note links to cite the Daily notes it synthesizes.
+_Avoid_: Cross-reference, internal link
